@@ -19,10 +19,10 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.AWS_REGION }}
+          aws-region: ${{ vars.AWS_REGION }}
 
       - name: Build React App
         run: yarn install && yarn build
 
       - name: Deploy app build to S3 bucket
-        run: aws s3 sync ./build s3://${{ env.BUCKET_NAME }} --delete
+        run: aws s3 sync ./build s3://${{ vars.BUCKET_NAME }} --delete
