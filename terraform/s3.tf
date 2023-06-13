@@ -1,10 +1,3 @@
-locals {
-  mime_types = jsondecode(file("${path.module}/mime.json"))
-
-  bash_cv_path   = "../build"
-  bash_cv_prefix = ""
-}
-
 resource "aws_s3_bucket" "frontend_bucket" {
   bucket = "maximiliano-aguirre-cv"
 
