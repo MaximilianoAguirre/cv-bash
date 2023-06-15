@@ -120,7 +120,7 @@ export const extensions = {
                 linkedin: "https://www.linkedin.com/in/maximilianoaguirre/",
                 html: "https://www.maximilianoaguirre.com",
                 svg: "https://svg.maximilianoaguirre.com",
-                pdf: `${window.location.href}cv.pdf`,
+                pdf: "https://1drv.ms/w/s!ArUW7Y93QIqFrwsw5mz1yv4Ix9Mu",
             }
 
             window.open(resources[resource], '_blank').focus();
